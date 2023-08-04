@@ -1,16 +1,34 @@
 def separa_letras(cadena):
+    """
+    La función se encarga de separar un string en un string que contiene
+    solo las mayúsculas y otro que contiene solo las minúsculas separados.
+    Asimismo, verifica que sea un string válido y si no lo es, brinda un
+    código de error único.
+    Input: cadena (str)
+    Output: código de error (int), upper (str), lower (str)
+    """
+
+    # Strings con las mayúsculas y minúsculas resultantes
     upper = ""
     lower = ""
 
+    # Si la cadena está vacía se detiene el programa
+    # con el código de error '-300'
     if cadena == '':
         return -300, None, None
 
+    # Si la cadena no es un string, se detiene el programa
+    # con el código de error '-100'
     if not isinstance(cadena, str):
         return -100, None, None
 
+    # Si la cadena contiene otros caracteres que no son alfabéticos,
+    # el programa se detiene con un código de error de -200
     if not cadena.isalpha():
         return -200, None, None
 
+    # Se recorre la cadena para comprobar si el caracter es mayúscula
+    # o minúscula y los va agrgando a su respectivo string
     for i in cadena:
         if i.isupper():
             upper += i
@@ -20,7 +38,7 @@ def separa_letras(cadena):
     return 0, upper, lower
 
 
-# Función potencia, recibela base y el exponente (potencia).
+# Función potencia, recibe la base y el exponente (potencia).
 
 def potencia_manual(base, potencia):
 
