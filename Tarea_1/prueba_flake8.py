@@ -1,8 +1,5 @@
-import time
-
-
-def imprimir ():
+def imprimir():
     print("Prueba flake8")
 
 
-imprimir();
+imprimir()
